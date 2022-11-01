@@ -21,6 +21,6 @@ public class Link{
     private String url;
 
     @ManyToOne
-    @JoinColumn(name = space_id)
-    private WorkSpace workSpace;
+    @JoinColumn(name = "space_id")
+    private WorkSpace workspace;
 }

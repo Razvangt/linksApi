@@ -7,5 +7,6 @@ public interface WorkSpaceInputPort {
    WorkSpace create(WorkSpace newWorkSpace);
    WorkSpace update(WorkSpace updateWorkSpace);
    Boolean   delete(String id);
+
    WorkSpace findByID(String id);
 }

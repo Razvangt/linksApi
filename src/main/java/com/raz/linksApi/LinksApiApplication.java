@@ -31,4 +31,5 @@ public class LinksApiApplication {
 		urlBasedCorsConfigurationSource.registerCorsConfiguration("/**", corsConfiguration);
 		return new CorsFilter(urlBasedCorsConfigurationSource);
 	}
+
 }

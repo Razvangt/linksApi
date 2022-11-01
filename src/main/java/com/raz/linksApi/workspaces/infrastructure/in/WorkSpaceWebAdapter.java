@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "workspace")
+@RequestMapping(value = "api/workspace")
 public class WorkSpaceWebAdapter {
     private final WorkSpaceInputPort inputPort;
 

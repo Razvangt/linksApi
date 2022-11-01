@@ -1,6 +1,7 @@
 package com.raz.linksApi.workspaces.domain;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.UUID;
 
 import com.raz.linksApi.links.domain.Link;
@@ -18,6 +19,6 @@ public class WorkSpace {
     @Column(name = "space_id")
     private UUID spaceId;
     private String title;
-    @OneToMany(mappedBy = "workspace")
-    private List<Link> links;
+    @OneToMany(mappedBy = "workspace",cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<Link> links = new HashSet<>();
 }

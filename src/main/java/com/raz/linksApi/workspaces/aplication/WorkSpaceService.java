@@ -33,4 +33,9 @@ public class WorkSpaceService implements WorkSpaceInputPort {
     public Boolean delete(String id) {
         return null;
     }
+
+    @Override
+    public WorkSpace findByID(String id) {
+        return null;
+    }
 }

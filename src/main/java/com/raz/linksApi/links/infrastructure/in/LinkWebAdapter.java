@@ -10,7 +10,7 @@ import java.util.UUID;
 
 
 @RestController
-@RequestMapping(value = "link")
+@RequestMapping(value = "api/link")
 public class LinkWebAdapter {
     private final LinkInputPort linkInputPort;
 
