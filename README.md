@@ -15,3 +15,5 @@
 
 - [ ] Add Link to WorkSpace
 - [ ] Delete Link from WorkSpace
+
+[](documentation/ERdiagram.png)
