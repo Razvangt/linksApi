@@ -1,17 +1,17 @@
 # linksApi
-
 ## Links 
-    id uuid
-    name string 
-    url  string
-- [X] Crud
+- [X] Crud (create read update delete)
+## Workbspaces
+- [ ] Crud
 
-## Workbench
-    workbenchId
-    title
-    cols
-    rows
-    
-# LinksWorkbechList
-    LinkId
-    workbenchId
+## SpacesLinks
+- [ ] Add Link to WorkSpace
+- [ ] Delete Link from WorkSpace
+
+## Tags
+- [ ] Crud
+
+## LinkTags
+
+- [ ] Add Link to WorkSpace
+- [ ] Delete Link from WorkSpace
