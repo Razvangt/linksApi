@@ -1,4 +1,4 @@
-package com.raz.linksApi.domain;
+package com.raz.linksApi.links.domain;
 
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;

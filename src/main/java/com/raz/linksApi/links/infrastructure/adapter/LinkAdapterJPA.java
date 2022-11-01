@@ -1,6 +1,6 @@
-package com.raz.linksApi.infrastructure.adapter;
+package com.raz.linksApi.links.infrastructure.adapter;
 
-import com.raz.linksApi.domain.Link;
+import com.raz.linksApi.links.domain.Link;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

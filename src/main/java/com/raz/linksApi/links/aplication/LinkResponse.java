@@ -1,6 +1,6 @@
-package com.raz.linksApi.aplication;
+package com.raz.linksApi.links.aplication;
 
-import com.raz.linksApi.domain.Link;
+import com.raz.linksApi.links.domain.Link;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;

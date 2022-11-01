@@ -1,8 +1,8 @@
-package com.raz.linksApi.infrastructure.adapter;
+package com.raz.linksApi.links.infrastructure.adapter;
 
-import com.raz.linksApi.aplication.LinkResponse;
-import com.raz.linksApi.domain.Link;
-import com.raz.linksApi.infrastructure.LinkInputPort;
+import com.raz.linksApi.links.aplication.LinkResponse;
+import com.raz.linksApi.links.domain.Link;
+import com.raz.linksApi.links.infrastructure.LinkInputPort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,8 +13,13 @@ import java.util.UUID;
 @RestController
 @RequestMapping(value = "link")
 public class LinkWebAdapter {
+    private final LinkInputPort linkInputPort;
+
     @Autowired
-    LinkInputPort linkInputPort;
+    public LinkWebAdapter(LinkInputPort linkInputPort){
+        this.linkInputPort = linkInputPort;
+    }
+
     @GetMapping
     public List<Link> getAll (){
       return linkInputPort.getAll();

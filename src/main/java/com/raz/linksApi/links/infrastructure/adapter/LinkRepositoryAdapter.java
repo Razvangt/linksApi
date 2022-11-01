@@ -1,7 +1,7 @@
-package com.raz.linksApi.infrastructure.adapter;
+package com.raz.linksApi.links.infrastructure.adapter;
 
-import com.raz.linksApi.domain.Link;
-import com.raz.linksApi.domain.LinkRepository;
+import com.raz.linksApi.links.domain.Link;
+import com.raz.linksApi.links.domain.LinkRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,8 +11,12 @@ import java.util.UUID;
 
 @Service
 public class LinkRepositoryAdapter implements LinkRepository {
+    private final LinkAdapterJPA db;
+
     @Autowired
-    LinkAdapterJPA db;
+    public LinkRepositoryAdapter ( LinkAdapterJPA db){
+        this.db = db;
+    }
     @Override
     public List<Link> searchALL() {
         return db.findAll();
