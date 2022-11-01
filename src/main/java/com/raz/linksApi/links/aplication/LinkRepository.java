@@ -1,4 +1,4 @@
-package com.raz.linksApi.links.domain;
+package com.raz.linksApi.links.aplication;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;

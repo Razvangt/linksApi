@@ -1,11 +1,10 @@
-package com.raz.linksApi.workspaces.infrastructure.adapter;
+package com.raz.linksApi.workspaces.infrastructure.in;
 
 import com.raz.linksApi.workspaces.domain.WorkSpace;
-import com.raz.linksApi.workspaces.infrastructure.WorkSpaceInputPort;
+import com.raz.linksApi.workspaces.infrastructure.in.WorkSpaceInputPort;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController
@@ -17,9 +16,12 @@ public class WorkSpaceWebAdapter {
     public WorkSpaceWebAdapter(WorkSpaceInputPort inputPort) {
         this.inputPort = inputPort;
     }
-
     @GetMapping
     public List<WorkSpace> getAll(){
        return inputPort.findAll();
+    }
+    @PostMapping
+    public WorkSpace  post(@RequestBody WorkSpace workSpace){
+       return inputPort.create(workSpace);
     }
 }

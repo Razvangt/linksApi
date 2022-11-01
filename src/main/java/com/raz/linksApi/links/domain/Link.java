@@ -1,5 +1,6 @@
 package com.raz.linksApi.links.domain;
 
+import com.raz.linksApi.workspaces.domain.WorkSpace;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -19,7 +20,7 @@ public class Link{
     private String name;
     private String url;
 
-    public void setIDfromString( String id){
-        this.id = (UUID.fromString(id));
-    }
+    @ManyToOne
+    @JoinColumn(name = space_id)
+    private WorkSpace workSpace;
 }

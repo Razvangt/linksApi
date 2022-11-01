@@ -1,4 +1,4 @@
-package com.raz.linksApi.links.infrastructure;
+package com.raz.linksApi.links.infrastructure.in;
 
 import com.raz.linksApi.links.aplication.LinkResponse;
 import com.raz.linksApi.links.domain.Link;

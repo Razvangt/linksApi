@@ -1,8 +1,7 @@
-package com.raz.linksApi.links.infrastructure.adapter;
+package com.raz.linksApi.links.infrastructure.in;
 
 import com.raz.linksApi.links.aplication.LinkResponse;
 import com.raz.linksApi.links.domain.Link;
-import com.raz.linksApi.links.infrastructure.LinkInputPort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

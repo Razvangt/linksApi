@@ -1,8 +1,7 @@
 package com.raz.linksApi.links.aplication;
 
 import com.raz.linksApi.links.domain.Link;
-import com.raz.linksApi.links.domain.LinkRepository;
-import com.raz.linksApi.links.infrastructure.LinkInputPort;
+import com.raz.linksApi.links.infrastructure.in.LinkInputPort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,10 +10,10 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Service
-public class LinkCrudUseCase implements LinkInputPort {
+public class LinkService implements LinkInputPort {
     private final LinkRepository db;
     @Autowired
-    public LinkCrudUseCase(LinkRepository db){
+    public LinkService(LinkRepository db){
         this.db = db;
     }
     @Override

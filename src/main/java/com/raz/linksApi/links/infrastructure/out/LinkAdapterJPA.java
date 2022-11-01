@@ -1,4 +1,6 @@
-package com.raz.linksApi.links.infrastructure.adapter;
+package com.raz.linksApi.links.infrastructure.out;
+
+
 
 import com.raz.linksApi.links.domain.Link;
 import org.springframework.data.jpa.repository.JpaRepository;

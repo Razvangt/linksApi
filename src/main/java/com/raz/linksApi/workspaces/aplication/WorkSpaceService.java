@@ -1,18 +1,17 @@
 package com.raz.linksApi.workspaces.aplication;
 
 import com.raz.linksApi.workspaces.domain.WorkSpace;
-import com.raz.linksApi.workspaces.domain.WorkSpaceRepository;
-import com.raz.linksApi.workspaces.infrastructure.WorkSpaceInputPort;
+import com.raz.linksApi.workspaces.infrastructure.in.WorkSpaceInputPort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class WorkSpaceCrudUseCase implements WorkSpaceInputPort {
+public class WorkSpaceService implements WorkSpaceInputPort {
     private final WorkSpaceRepository db;
     @Autowired
-    public WorkSpaceCrudUseCase(WorkSpaceRepository db){
+    public WorkSpaceService(WorkSpaceRepository db){
         this.db = db;
     }
     @Override
@@ -22,7 +21,7 @@ public class WorkSpaceCrudUseCase implements WorkSpaceInputPort {
 
     @Override
     public WorkSpace create(WorkSpace newWorkSpace) {
-        return null;
+        return db.create(newWorkSpace);
     }
 
     @Override

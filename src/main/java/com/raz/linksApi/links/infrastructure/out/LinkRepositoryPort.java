@@ -1,7 +1,7 @@
-package com.raz.linksApi.links.infrastructure.adapter;
+package com.raz.linksApi.links.infrastructure.out;
 
 import com.raz.linksApi.links.domain.Link;
-import com.raz.linksApi.links.domain.LinkRepository;
+import com.raz.linksApi.links.aplication.LinkRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,11 +10,11 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Service
-public class LinkRepositoryAdapter implements LinkRepository {
+public class LinkRepositoryPort implements LinkRepository {
     private final LinkAdapterJPA db;
 
     @Autowired
-    public LinkRepositoryAdapter ( LinkAdapterJPA db){
+    public LinkRepositoryPort ( LinkAdapterJPA db){
         this.db = db;
     }
     @Override

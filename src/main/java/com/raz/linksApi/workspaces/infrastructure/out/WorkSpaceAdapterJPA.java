@@ -1,4 +1,4 @@
-package com.raz.linksApi.workspaces.infrastructure.adapter;
+package com.raz.linksApi.workspaces.infrastructure.out;
 
 import com.raz.linksApi.workspaces.domain.WorkSpace;
 import org.springframework.data.jpa.repository.JpaRepository;
