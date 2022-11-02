@@ -29,7 +29,6 @@ public class LinkRepositoryPort implements LinkRepository {
     public Link create(Link newLink) {
         return db.save(newLink);
     }
-
     @Override
     public Boolean delete(UUID id) {
        if (searchById(id).isEmpty()){

@@ -7,14 +7,16 @@ import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
 @Repository
-public class WorkSpaceRepositoryAdapter implements WorkSpaceRepository {
+public class WorkSpaceOutPort implements WorkSpaceRepository {
 
     private final WorkSpaceAdapterJPA postgresDB;
 
     @Autowired
-    public WorkSpaceRepositoryAdapter(WorkSpaceAdapterJPA postgresDB) {
+    public WorkSpaceOutPort(WorkSpaceAdapterJPA postgresDB) {
         this.postgresDB = postgresDB;
     }
 
@@ -27,5 +29,11 @@ public class WorkSpaceRepositoryAdapter implements WorkSpaceRepository {
     @Override
     public WorkSpace create(WorkSpace newWorkspace) {
         return postgresDB.save(newWorkspace);
+    }
+
+    
+    @Override
+    public Optional<WorkSpace> findById(UUID space_id) {
+        return postgresDB.findById(space_id);
     }
 }

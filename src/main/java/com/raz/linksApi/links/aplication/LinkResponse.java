@@ -9,6 +9,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class LinkResponse {
-    private Link link;
+    private LinkDTO link;
     private String Response;
 }
