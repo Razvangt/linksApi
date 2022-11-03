@@ -15,4 +15,6 @@ public interface LinkInputPort {
      LinkResponse update(Link updatedLink);
 
      LinkResponse update(String spaceId, Link link);
+
+     List<LinkDTO> getBydWorkSpaceId(String spaceId);
 }

@@ -39,4 +39,8 @@ public class LinkWebAdapter {
     public LinkResponse update(@RequestParam(required = false) String space_id,@RequestBody Link  link){
         return space_id != null ? linkInputPort.update(space_id, link) : linkInputPort.update( link);
     }
+    @GetMapping("/workspace/{space_id}")
+    public List<LinkDTO> getLinksByWorkSpaceId(@PathVariable String space_id){
+        return linkInputPort.getBydWorkSpaceId(space_id);
+    }
 }

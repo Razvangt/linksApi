@@ -20,5 +20,5 @@ public class WorkSpace {
     private UUID spaceId;
     private String title;
     @OneToMany(mappedBy = "workspace",cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Set<Link> links = new HashSet<>();
+    private Set<Link> links;
 }

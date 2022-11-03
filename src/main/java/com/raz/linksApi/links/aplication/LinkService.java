@@ -100,4 +100,9 @@ public class LinkService implements LinkInputPort {
                  .Response("Done")
                  .build();
     }
+
+    @Override
+    public List<LinkDTO> getBydWorkSpaceId(String spaceId) {
+        return db.searchByWorkSpaceId(UUID.fromString(spaceId)).stream().map(link -> LinkDTO.builder().build().fromLink(link)).collect(Collectors.toList());
+    }
 }

@@ -1,7 +1,7 @@
 package com.raz.linksApi.workspaces.infrastructure.in;
 
+import com.raz.linksApi.workspaces.aplication.WorkSpaceResponse;
 import com.raz.linksApi.workspaces.domain.WorkSpace;
-import com.raz.linksApi.workspaces.infrastructure.in.WorkSpaceInputPort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,5 +23,13 @@ public class WorkSpaceWebAdapter {
     @PostMapping
     public WorkSpace  post(@RequestBody WorkSpace workSpace){
        return inputPort.create(workSpace);
+    }
+    @GetMapping("/")
+    public WorkSpaceResponse getById(@RequestParam String id){
+        return inputPort.findByID(id);
+    }
+    @DeleteMapping
+    public WorkSpaceResponse  delete(@RequestParam String id){
+        return inputPort.delete(id);
     }
 }

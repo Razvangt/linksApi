@@ -46,4 +46,9 @@ public class LinkRepositoryPort implements LinkRepository {
         }
         return db.save(linkUpdated);
     }
+
+    @Override
+    public List<Link> searchByWorkSpaceId(UUID id) {
+        return db.findAllByWorkspaceId(id);
+    }
 }

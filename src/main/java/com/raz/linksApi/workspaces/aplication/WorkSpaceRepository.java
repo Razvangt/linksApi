@@ -11,4 +11,6 @@ public interface WorkSpaceRepository {
   List<WorkSpace> SearchAll();
   WorkSpace create(WorkSpace newWorkspace);
   Optional<WorkSpace> findById(UUID space_id);
+  Boolean delete(UUID space_id);
+  WorkSpace update(WorkSpace updateWorkSpace);
 }

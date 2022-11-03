@@ -10,4 +10,6 @@ public interface LinkRepository {
     Link create(Link newLink);
     Boolean delete(UUID id);
     Link update(Link linkUpdated);
+
+    List<Link> searchByWorkSpaceId(UUID id);
 }

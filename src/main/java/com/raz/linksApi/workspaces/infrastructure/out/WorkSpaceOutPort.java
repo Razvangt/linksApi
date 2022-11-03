@@ -36,4 +36,18 @@ public class WorkSpaceOutPort implements WorkSpaceRepository {
     public Optional<WorkSpace> findById(UUID space_id) {
         return postgresDB.findById(space_id);
     }
+
+    @Override
+    public Boolean delete(UUID space_id) {
+        if(findById(space_id).isEmpty()){
+            return  false;
+        }
+         postgresDB.deleteById(space_id);
+            return true;
+    }
+
+    @Override
+    public WorkSpace update(WorkSpace updateWorkSpace) {
+        return postgresDB.save(updateWorkSpace);
+    }
 }
