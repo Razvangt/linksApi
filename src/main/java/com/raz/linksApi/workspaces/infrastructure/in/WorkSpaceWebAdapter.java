@@ -20,16 +20,17 @@ public class WorkSpaceWebAdapter {
     public List<WorkSpace> getAll(){
        return inputPort.findAll();
     }
+    @GetMapping("/{space_id}")
+    public WorkSpaceResponse getById(@PathVariable String space_id){
+        return inputPort.findByID(space_id);
+    }
     @PostMapping
     public WorkSpace  post(@RequestBody WorkSpace workSpace){
        return inputPort.create(workSpace);
     }
-    @GetMapping("/")
-    public WorkSpaceResponse getById(@RequestParam String id){
-        return inputPort.findByID(id);
-    }
-    @DeleteMapping
-    public WorkSpaceResponse  delete(@RequestParam String id){
-        return inputPort.delete(id);
+
+    @DeleteMapping("/{space_id}")
+    public WorkSpaceResponse  delete(@PathVariable String space_id){
+        return inputPort.delete(space_id);
     }
 }
